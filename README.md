@@ -360,24 +360,12 @@ sudo apt update
 sudo apt install --fix-broken
 ```
 
-### Problemas de Temas
-Si los temas no cambian correctamente:
-1. Asegúrate de tener la versión v1.0.1+
-2. Ve a Opciones → Preferencias
-3. Cambia el tema y haz clic en "Aceptar"
-
 ### Configuración Personalizada del Historial
 Para configurar un directorio personalizado donde guardar el historial:
 1. Ve a **Opciones** → **Preferencias**
 2. En "Directorio de configuración", haz clic en **Examinar**
 3. Selecciona la carpeta donde quieres guardar el historial
 4. El historial actual se migrará automáticamente
-
-**📋 Documentación Adicional**:
-- [SNAP_SOLUCION.md](SNAP_SOLUCION.md) - Solución definitiva a problemas de Snap
-- [INSTALACION_DEB.md](INSTALACION_DEB.md) - Instalación paso a paso
-- [TEMAS.md](TEMAS.md) - Personalización de temas
-- [MEJORAS_INTERFAZ.md](MEJORAS_INTERFAZ.md) - Mejoras de interfaz implementadas
 
 ## 🎯 Versiones
 
@@ -425,12 +413,6 @@ Las contribuciones son bienvenidas. Para cambios importantes:
 4. Commit tus cambios
 5. Push a la branch
 6. Abre un Pull Request
-
-## 📞 Soporte
-
-- **Documentación completa**: Toda la información está en este README.md
-- **Issues**: Reporta problemas en GitHub
-- **Wiki**: Consulta la wiki del proyecto para guías avanzadas
 
 ## 🎉 ¡Empezar!
 
