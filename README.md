@@ -26,7 +26,10 @@ Para utilizar el paquete .deb, solo hay que dirigirse a la paǵina de lanzamient
 ```bash
 # Descargar e instalar el paquete .deb
 sudo apt install ./descargaloto_1.0.3_amd64.deb
+
 ```
+![lanzador-descargaloto](https://github.com/user-attachments/assets/0670508d-7a49-42de-bc23-0a5176a7bdf4)
+
 Tras la instalación, se puede buscar el lanzador en nuestro equipo o siemplemente ejecutar en la terminal:
 
 ```bash
