@@ -1,39 +1,42 @@
-# 📥 DescargaloTó - Gestor de Descargas Multiplataforma
+# 📥 DescargaloTó - Gestor de descargas
 
 ![DescargaloTó](img/logo.png)
 
-**DescargaloTó** es un gestor de descargas moderno desarrollado en C++ con Qt6 que permite descargar archivos desde URLs de forma sencilla y eficiente con una interfaz gráfica intuitiva.
+**DescargaloTó** es un gestor de descargas que me acabo de hacer, por que puedo y por que lo necesito. Está desarrollado en C++ con Qt6, lo cual permite descargar archivos desde URLs de forma sencilla y eficiente con una interfaz gráfica muy facilita y sencilla de usar. Guarda registro de las URL's descargadas para volver a utilizar las mismas URL's en otro momento sin tener que volver a buscarlas ni nada de eso... Vamos, es algo que me resulta útil en momentos puntuales.
 
-## ✨ Características Principales
+## ✨ Características principales
 
-- 🖥️ **Interfaz gráfica moderna e intuitiva**
+- 🖥️ **Interfaz gráfica intuitiva**
 - 📥 **Gestión de múltiples descargas** desde URLs
 - 📜 **Historial completo de descargas** con fechas
-- 🎯 **Selección inteligente**: Botón "Descargar Ahora" activado por selección del historial
-- 🎨 **Temas personalizables**: Claro y oscuro
-- � **Configuración personalizada**: Elige dónde guardar el historial de descargas
+- 🎯 **Selección inteligente**: El botón "Descargar Ahora" se activa seleccionando la URL guardada en el historial
+- 🎨 **Temas seleccionables**: Entre un tema claro y otro oscuro
+- � **Configuración personalizada**: El programa permite elegir dónde guardar el historial de descargas, para tenerlo a mano.
 - 🔄 **Migración automática**: Mueve el historial al cambiar de directorio
 - �🔔 **Integración con bandeja del sistema**
 - � **Configuración de carpeta de destino**
 - 🗑️ **Desinstalación limpia**: Elimina configuración y historial al desinstalar
-- 🛡️ **Manejo robusto de errores**
-- 🐧 **Multiplataforma**: Linux y Windows
-- 🔧 **Optimizado para sistemas con conflictos de librerías** (Snap/AppImage)
+- 🛡️ **Manejo de errores**
+- 🐧 **Multiplataforma**: Por el momento funciona en Linux y Windows
 
 ## 🚀 Instalación Rápida
 
 ### Ubuntu/Debian (.deb)
+Para utilizar el paquete .deb, solo hay que dirigirse a la paǵina de lanzamientos y [descargar desde ahí la última versión publicado del paquete](https://github.com/sapoclay/descargaloto/releases/) Una vez que tengamos guardado el paquete basta con ejecutar en una terminal (Ctrl+Alt+T) el comando:
 ```bash
 # Descargar e instalar el paquete .deb
 sudo apt install ./descargaloto_1.0.3_amd64.deb
+```
+Tras la instalación, se puede buscar el lanzador en nuestro equipo o siemplemente ejecutar en la terminal:
 
+```bash
 # Ejecutar
 DescargaloTo
 # o modo seguro si hay problemas:
 descargaloto-safe
 ```
 
-### Desde Código Fuente
+### Desde código fuente
 ```bash
 # Clonar repositorio
 git clone https://github.com/sapoclay/descargaloto.git
@@ -50,47 +53,21 @@ make run
 sudo make install
 ```
 
-## 🎮 Cómo Usar
-
-### 🚀 Métodos de Ejecución
-
-#### ✅ **Método Recomendado (Desarrollo)**
-```bash
-make run                   # Entorno ultra-limpio automático
-```
-
-#### ✅ **Después de Instalar el Paquete**
-```bash
-DescargaloTo              # Comando principal con detección automática
-descargaloto-safe         # Entorno ultra-limpio garantizado
-```
-
-#### ✅ **Scripts Alternativos**
-```bash
-./run_clean.sh           # Script manual ultra-limpio
-make run-safe            # Para diagnóstico si hay problemas
-```
-
-#### ❌ **NUNCA uses (causarán errores con Snap):**
-```bash
-# ❌ NO HAGAS ESTO:
-cd build && ./DescargaloTo
-./build/DescargaloTo
-```
+## 🎮 Cómo usar
 
 ### 1. Añadir URLs al Historial
 1. Introduce una URL en el campo "Nueva Descarga"
 2. Haz clic en **"Añadir al Historial"** o presiona Enter
 3. La URL se guardará en el historial con fecha y hora
 
-### 2. Descargar Archivos
+### 2. Descargar archivos
 1. **Selecciona una URL** del historial (clic en una fila)
 2. Haz clic en **"Descargar Ahora"** (se activa solo con selección)
 3. Elige la carpeta de destino
-4. Especifica el nombre del archivo
+4. Especifica el nombre del archivo que quieres guardar (añadiendo la extensión si es necesaria)
 5. ¡La descarga comenzará automáticamente!
 
-### 3. Gestionar Historial
+### 3. Gestionar historial
 - **Eliminar Seleccionada**: Borra la URL seleccionada
 - **Limpiar Historial**: Elimina todas las URLs guardadas
 
@@ -99,9 +76,34 @@ cd build && ./DescargaloTo
 - Elige entre **Tema Claro** y **Tema Oscuro**
 - Los cambios se aplican inmediatamente
 
-## 🎨 Interfaz de Usuario
+### 🚀 Métodos de ejecución
 
-### Secciones Principales
+#### ✅ **Método recomendado (Desarrollo)**
+```bash
+make run                   # Entorno ultra-limpio automático
+```
+
+#### ✅ **Después de instalar el paquete**
+```bash
+DescargaloTo              # Comando principal con detección automática
+descargaloto-safe         # Entorno ultra-limpio garantizado
+```
+
+#### ✅ **Scripts alternativos**
+```bash
+./run_clean.sh           # Script manual ultra-limpio
+make run-safe            # Para diagnóstico si hay problemas
+```
+
+#### ❌ **NUNCA uses los siguientes comandos (causarán errores con Snap):**
+```bash
+# ❌ NO HAGAS ESTO:
+cd build && ./DescargaloTo
+./build/DescargaloTo
+```
+## 🎨 Interfaz de usuario
+
+### Secciones principales
 
 1. **Nueva Descarga** 
    - Campo de entrada para URLs
@@ -122,9 +124,9 @@ cd build && ./DescargaloTo
 Introducir URL → Añadir al Historial → Seleccionar del Historial → Descargar Ahora
 ```
 
-## � Configuración Personalizada del Historial
+## � Configuración personalizada del historial
 
-### 🔧 Directorio de Configuración Personalizado
+### 🔧 Directorio de configuración personalizado
 
 DescargaloTó permite elegir dónde guardar el historial de descargas y la configuración.
 
@@ -138,7 +140,7 @@ DescargaloTó permite elegir dónde guardar el historial de descargas y la confi
 
 **Directorio Por Defecto** (Linux):
 ```bash
-~/.config/SapoClay/DescargaloTó.conf
+~/.config/nombre-usuario/DescargaloTó.conf
 ```
 
 **Directorio Personalizado**:
@@ -174,14 +176,11 @@ customConfigDir=/ruta/al/directorio/personalizado
 # Ver configuración actual
 cat ~/.config/SapoClay/DescargaloTó.conf
 
-# Buscar todas las configuraciones
-find $HOME -name "*DescargaloTo*" -o -name "*DescargaloTó*" 2>/dev/null
-
 # Limpiar configuración manualmente
 rm ~/.config/SapoClay/DescargaloTó.conf
 ```
 
-## �🔧 Requisitos del Sistema
+## �🔧 Requisitos del sistema
 
 ### Linux (Ubuntu/Debian)
 - Ubuntu 22.04 LTS o superior
@@ -189,7 +188,7 @@ rm ~/.config/SapoClay/DescargaloTó.conf
 - Qt6 (Core, Widgets, Network)
 - Dependencias se instalan automáticamente con el .deb
 
-### Compilación desde Fuente
+### Compilación desde fuente
 - **Qt6**: libqt6-dev, qt6-base-dev
 - **CMake**: 3.16 o superior
 - **Compilador**: GCC con soporte C++17
@@ -221,7 +220,7 @@ descargaloto/
 └── *.md                   # Documentación
 ```
 
-### Comandos de Desarrollo
+### Comandos de desarrollo
 ```bash
 make clean          # Limpiar archivos de build
 make build          # Compilar proyecto
@@ -234,7 +233,7 @@ make deps           # Verificar dependencias
 make help           # Mostrar ayuda completa
 ```
 
-## 🚀 Guía Detallada de Ejecución
+## 🚀 Guía detallada de ejecución
 
 ### ⚠️ Importante: Problemas Conocidos con Snap
 
@@ -243,26 +242,26 @@ Si ejecutas directamente el binario puede aparecer este error:
 symbol lookup error: /snap/core20/current/lib/x86_64-linux-gnu/libpthread.so.0: undefined symbol: __libc_pthread_init
 ```
 
-### ✅ Métodos de Ejecución Seguros
+### ✅ Métodos de ejecución seguros
 
-#### **1. Durante Desarrollo (Recomendado)**
+#### **1. Durante desarrollo (Recomendado)**
 ```bash
 make run                    # ✅ Entorno ultra-limpio automático
 ```
 
-#### **2. Después de Instalar el Paquete**
+#### **2. Después de instalar el paquete**
 ```bash
 DescargaloTo               # ✅ Detección automática de entorno
 descargaloto-safe          # ✅ Entorno ultra-limpio garantizado (con mensaje)
 ```
 
-#### **3. Scripts Alternativos de Desarrollo**
+#### **3. Scripts alternativos de desarrollo**
 ```bash
 ./run_clean.sh            # ✅ Script manual ultra-limpio
 make run-safe             # ✅ Para diagnóstico si hay problemas
 ```
 
-#### **4. Ejecución Manual Avanzada**
+#### **4. Ejecución manual avanzada**
 ```bash
 cd build
 env -i \
@@ -292,9 +291,9 @@ El entorno limpio:
 - ✅ Conserva solo variables esenciales para Qt/X11  
 - ✅ Usa un PATH limpio del sistema
 - ✅ Garantiza que no hay interferencias
-- ✅ Funciona en el 100% de los casos
+- ✅ Funciona en el 100% de los casos en los que lo he probado
 
-### 📦 Instalación con Paquete .deb
+### 📦 Instalación con paquete .deb
 
 #### **Crear e Instalar el Paquete**:
 ```bash
@@ -328,29 +327,7 @@ Cuando ejecutes correctamente, verás:
 [El programa se abre correctamente en la bandeja del sistema]
 ```
 
-## ⚠️ Solución de Problemas
-
-### ✅ Problemas de Librerías (RESUELTO en v1.0.2)
-**PROBLEMA**: Conflictos de librerías con Snap/AppImage:
-```
-symbol lookup error: /snap/core20/current/lib/x86_64-linux-gnu/libpthread.so.0: undefined symbol: __libc_pthread_init
-```
-
-**✅ SOLUCIÓN AUTOMÁTICA (v1.0.2+)**:
-Los comandos detectan automáticamente conflictos y se limpian automáticamente.
-
-```bash
-# ✅ Detección automática y limpieza inteligente:
-DescargaloTo                # Se adapta al entorno automáticamente
-descargaloto-safe          # Entorno ultra-limpio garantizado
-
-# ✅ Durante desarrollo también funciona:
-make run                   # Detección automática incluida
-```
-
-**No requiere configuración manual** - funciona automáticamente en todos los entornos.
-
-### Problemas de Dependencias
+### Problemas de dependencias
 ```bash
 # Verificar Qt6
 apt list --installed | grep qt6
@@ -359,14 +336,6 @@ apt list --installed | grep qt6
 sudo apt update
 sudo apt install --fix-broken
 ```
-
-### Configuración Personalizada del Historial
-Para configurar un directorio personalizado donde guardar el historial:
-1. Ve a **Opciones** → **Preferencias**
-2. En "Directorio de configuración", haz clic en **Examinar**
-3. Selecciona la carpeta donde quieres guardar el historial
-4. El historial actual se migrará automáticamente
-
 ## 🎯 Versiones
 
 ### v1.0.0 (Inicial)
@@ -423,9 +392,9 @@ sudo apt install ./descargaloto_1.0.3_amd64.deb
 # Primera ejecución:
 DescargaloTo
 
-# ¡A descargar archivos! 🚀
+# ¡Descargonizamiento ....! 🚀
 ```
 
 ---
 
-**DescargaloTó** - *Descargas simples, gestión inteligente* 📥✨
+**DescargaloTó** - *Descargas simples, gestión inteligente del tiempo* 📥✨
