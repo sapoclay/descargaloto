@@ -1,0 +1,18 @@
+#!/bin/bash
+# Wrapper para DescargaloTó que soluciona problemas con librerías de Snap
+# Este script crea un entorno completamente limpio para evitar conflictos
+
+echo "🚀 Iniciando DescargaloTó con entorno ultra-limpio..."
+
+# Crear un entorno completamente nuevo sin variables de Snap
+exec env -i \
+    HOME="$HOME" \
+    USER="$USER" \
+    PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
+    DISPLAY="${DISPLAY:-:0}" \
+    XAUTHORITY="${XAUTHORITY}" \
+    XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}" \
+    XDG_SESSION_TYPE="x11" \
+    QT_QPA_PLATFORM="xcb" \
+    QT_QPA_PLATFORM_PLUGIN_PATH="" \
+    /usr/local/bin/DescargaloTo "$@"

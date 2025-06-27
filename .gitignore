@@ -1,0 +1,67 @@
+# Directorios de build
+build/
+debug/
+release/
+Debug/
+Release/
+
+# Archivos de CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Archivos generados por Qt
+*.o
+*.obj
+*.so
+*.dll
+*.dylib
+*.a
+*.lib
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+*.moc
+
+# Archivos de compilador
+*.user
+*.pro.user*
+*.vcxproj*
+*.sln
+*.suo
+*.ncb
+*.aps
+*.plg
+*.opt
+*.clw
+*.pdb
+*.idb
+*.ilk
+*.exp
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+*.tmp
+*.temp
+*~
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos de configuración local
+config.ini
+settings.ini
+
+# Logs
+*.log
+
+# Archivos de backup
+*.bak
+*.backup

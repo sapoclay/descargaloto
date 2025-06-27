@@ -1,0 +1,73 @@
+DescargaloTó - Gestor de Descargas Multiplataforma
+=====================================================
+
+DESCRIPCIÓN
+-----------
+DescargaloTó es un gestor de descargas moderno desarrollado en C++ con Qt6.
+Permite descargar archivos desde URLs de forma sencilla y eficiente con una
+interfaz gráfica intuitiva.
+
+CARACTERÍSTICAS
+---------------
+* Interfaz gráfica moderna e intuitiva
+* Gestión de múltiples descargas simultáneas  
+* Historial de descargas completo
+* Integración con la bandeja del sistema
+* Configuración de carpeta de destino
+* Manejo robusto de errores
+* Temas claro y oscuro personalizables
+* Optimizado para sistemas con conflictos de librerías
+
+INSTALACIÓN
+-----------
+El paquete .deb se instala automáticamente con:
+  sudo dpkg -i descargaloto_1.0.0_amd64.deb
+  sudo apt-get install -f  # Para resolver dependencias
+
+EJECUCIÓN
+---------
+Puedes ejecutar DescargaloTó de varias formas:
+
+1. Desde el menú de aplicaciones:
+   Busca "DescargaloTó" en el menú
+
+2. Desde terminal:
+   DescargaloTo
+
+3. Modo seguro (recomendado si hay problemas con librerías):
+   descargaloto-safe
+
+PERSONALIZACIÓN
+---------------
+El programa incluye opciones de personalización:
+- Temas claro y oscuro
+- Configuración de carpeta de descargas
+- Acceso desde: Opciones → Preferencias
+
+SOLUCIÓN DE PROBLEMAS
+--------------------
+Si encuentras errores relacionados con librerías (especialmente en sistemas
+con Snap instalado), usa el comando 'descargaloto-safe' que limpia el entorno
+antes de ejecutar el programa.
+
+Errores comunes:
+- "symbol lookup error": Usa descargaloto-safe
+- Problemas con Qt plugins: Usa descargaloto-safe
+
+DESINSTALACIÓN
+--------------
+Para desinstalar:
+  sudo apt-get remove descargaloto
+
+SOPORTE
+-------
+Para reportar errores o solicitar características:
+https://github.com/sapoclay/descargaloto
+
+LICENCIA
+--------
+Consulta el archivo LICENSE incluido con el programa.
+
+AUTOR
+-----
+DescargaloTó Team

@@ -1,0 +1,15 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DescargaloTó
+Name[en]=DescargaloTó
+Comment=Gestor de descargas multiplataforma moderno
+Comment[en]=Modern cross-platform download manager
+Exec=env -u LD_LIBRARY_PATH -u LD_PRELOAD QT_QPA_PLATFORM_PLUGIN_PATH="" /usr/local/bin/DescargaloTo
+Icon=descargaloto
+Terminal=false
+Categories=Network;FileTransfer;Utility;
+StartupWMClass=DescargaloTo
+StartupNotify=true
+MimeType=x-scheme-handler/http;x-scheme-handler/https;
+Keywords=download;manager;files;internet;descargas;gestor;archivos;

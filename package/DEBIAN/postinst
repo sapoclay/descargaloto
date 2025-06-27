@@ -1,0 +1,24 @@
+#!/bin/bash
+# Script post-instalación para DescargaloTó
+
+set -e
+
+# Actualizar base de datos de aplicaciones
+if command -v update-desktop-database >/dev/null 2>&1; then
+    update-desktop-database /usr/local/share/applications 2>/dev/null || true
+fi
+
+# Actualizar cache de iconos
+if command -v gtk-update-icon-cache >/dev/null 2>&1; then
+    gtk-update-icon-cache -f -t /usr/local/share/icons/hicolor 2>/dev/null || true
+fi
+
+# Configurar permisos ejecutables
+chmod +x /usr/local/bin/DescargaloTo 2>/dev/null || true
+chmod +x /usr/local/bin/descargaloto-safe 2>/dev/null || true
+
+echo "DescargaloTó se ha instalado correctamente."
+echo "Puedes ejecutarlo desde el menú de aplicaciones o con el comando 'DescargaloTo'"
+echo "Si tienes problemas con librerías, usa 'descargaloto-safe'"
+
+exit 0

@@ -1,0 +1,21 @@
+#!/bin/bash
+# Wrapper principal para DescargaloTó que detecta el entorno automáticamente
+
+# Verificar si hay conflictos de Snap
+if [[ -n "$SNAP" ]] || [[ "$PATH" == *"/snap/"* ]] || [[ -n "$LD_LIBRARY_PATH" && "$LD_LIBRARY_PATH" == *"snap"* ]]; then
+    # Entorno con Snap detectado, usar método ultra-limpio
+    exec env -i \
+        HOME="$HOME" \
+        USER="$USER" \
+        PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin" \
+        DISPLAY="${DISPLAY:-:0}" \
+        XAUTHORITY="${XAUTHORITY}" \
+        XDG_RUNTIME_DIR="${XDG_RUNTIME_DIR}" \
+        XDG_SESSION_TYPE="x11" \
+        QT_QPA_PLATFORM="xcb" \
+        QT_QPA_PLATFORM_PLUGIN_PATH="" \
+        /usr/local/bin/DescargaloTo-bin "$@"
+else
+    # Entorno limpio, ejecutar normalmente
+    exec /usr/local/bin/DescargaloTo-bin "$@"
+fi

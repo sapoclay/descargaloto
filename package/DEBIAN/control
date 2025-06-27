@@ -1,0 +1,25 @@
+Package: descargaloto
+Version: 1.0.3
+Section: net
+Priority: optional
+Architecture: amd64
+Depends: libqt6core6 (>= 6.0.0), libqt6widgets6 (>= 6.0.0), libqt6network6 (>= 6.0.0), libqt6gui6 (>= 6.0.0), libc6 (>= 2.34), libgcc-s1 (>= 11), libstdc++6 (>= 11)
+Installed-Size: 4700
+Maintainer: DescargaloTó Team <info@descargaloto.com>
+Description: Gestor de descargas multiplataforma moderno
+ DescargaloTó es un gestor de descargas desarrollado en C++ con Qt6
+ que permite descargar archivos desde URLs de forma sencilla y eficiente.
+ .
+ Características principales:
+  * Interfaz gráfica moderna e intuitiva
+  * Gestión de múltiples descargas simultáneas
+  * Historial de descargas
+  * Integración con la bandeja del sistema
+  * Soporte para Linux y Windows
+  * Configuración de carpeta de destino
+  * Manejo de errores robusto
+  * Temas claro y oscuro personalizables
+ .
+ El programa está optimizado para funcionar correctamente incluso
+ en sistemas con conflictos de librerías como Snap/AppImage.
+Homepage: https://github.com/sapoclay/descargaloto
